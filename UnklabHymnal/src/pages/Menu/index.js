@@ -1,14 +1,17 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
-const Menu = () => {
+const Menu = ({navigation}) => {
     return (
-        <View>
-            <Text>Menu Pages</Text>
-        </View>
+        <View >
+                    <TouchableOpacity onPress={()=>{navigation.navigate('SongIndex')}}>
+                            <Text>Index Lagu</Text>
+                    </TouchableOpacity>
+         </View>
+
     )
 }
 
 export default Menu;
 
-const styles = StyleSheet.create({})

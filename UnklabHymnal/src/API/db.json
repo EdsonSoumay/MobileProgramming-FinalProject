@@ -1,0 +1,45 @@
+{
+    "favoriteSong": [],
+    "comments": [],
+    "profile": {
+      "name": "typicode"
+    },
+    "data": [
+      {
+        "id": 1,
+        "Search": "1*Before Jehova's awfulthrone*Jhon Hatton*Before Jehovah's aweful throne ye nations bow with sacred joy know that the Lord is God alone he can create and he destroy*Before Jehovah's aweful throne ye nations bow with sacred joy know that the Lord is God alone he can create and he destroy*We'll crowd thy gates with thankful songs high as the heavens our voices raise and earth with her ten thousand tongues shall fill thy courts with sounding praise*Wide as the world is thy command vast as eternity thy love firm as a rock thy truth must stand when rolling years shall cease to move",
+        "Nomor": "1",
+        "Judul": " Before Jehova's awfulthrone",
+        "Pengubah": "Jhon Hatton",
+        "Birama": "4/4",
+        "NadaDasar": "D",
+        "Ket1": "1/4",
+        "Ayat1": "Before Jehovah's aweful throne, ye nations, bow with sacred joy; know that the Lord is God alone: he can create, and he destroy.",
+        "Ket2": "2/4",
+        "Ayat2": "His sovereign power, without our aid,made us of clay, and formed us then; and, when like wandering sheep we strayed, he brought us to his fold again.",
+        "Ket3": "3/4",
+        "Ayat3": "We'll crowd thy gates with thankful songs, high as the heavens our voices raise; and earth, with her ten thousand tongues, shall fill thy courts with sounding praise.",
+        "Ket4": "4/4",
+        "Ayat4": "Wide as the world is thy command, vast as eternity thy love; firm as a rock thy truth must stand, when rolling years shall cease to move.",
+        "Lagu": "../project_baru/assets/lagu/1.mp3"
+      },
+      {
+        "id": 2,
+        "Search": "2*Di hadapan hadirat Hu*Jhon Hatton*Di hadapan hadirat Hu Hai bangsa-bangsa tunduklah Ketahuilah olehmu Khalikmu itulah Allah *Dari debu dan tanahlah Kita dijadikan Tuhan Dan bila tersesat kita Tuhan tak akan tinggalkan*Kuasa dan kasih Allah Memenuhi segnap dunia Tetap teguhlah firman-Nya,Hingga penuh hadiratNya*Di pintu Surga yang suci Menyanyi beribu lidah Tuhan kita akan puji Sampai slama-lamanya.",
+        "Nomor": "2",
+        "Judul": "Di hadapan hadirat Hu",
+        "Pengubah": "Jhon Hatton",
+        "Birama": "4/4",
+        "NadaDasar": "D",
+        "Ket1": "1/4",
+        "Ayat1": " Di hadapan hadirat Hu Hai bangsa-bangsa tunduklah Ketahuilah olehmu, Khalikmu itulah Allah.",
+        "Ket2": "2/4",
+        "Ayat2": "Dari debu dan tanahlah Kita dijadikan Tuhan Dan bila tersesat kita, Tuhan tak akan tinggalkan.",
+        "Ket3": "3/4",
+        "Ayat3": "Kuasa dan kasih Allah Memenuhi segnap dunia Tetap teguhlah firman-Nya,Hingga penuh hadirat-Nya.",
+        "Ket4": "4/4",
+        "Ayat4": "Di pintu Surga yang suci Menyanyi beribu lidah Tuhan kita akan puji, Sampai slama-lamanya.",
+        "Lagu": "../project_baru/assets/lagu/1.mp3"
+      }
+    ]
+  }
