@@ -29,11 +29,40 @@ const DisplaySong=({ route, navigation }) =>{
           Ayat5: Ayat5, 
           Ref: Ref
         } 
-        
-        axios.post('http://10.0.2.2:3004/favoriteSong', dt)
-        .then(res=>{
-            console.log(res)
-        })
+
+        axios.get('http://10.0.2.2:3004/favoriteSong')
+        .then( GetRes =>{
+            const items = []
+              GetRes.data.map(item=>{;
+              hasil(item.Nomor)
+            })
+                function hasil (data){
+                items.push(data);
+            }
+            function cariNomor(arrayNomor, NomorLagu) {
+              if (arrayNomor.indexOf(NomorLagu) !== -1) {
+                console.log("Nomor ada");
+                showMessage({
+                message: "Lagu Sudah ada",
+                type: 'default',
+                backgroundColor: '#B22222', // background color
+                color: 'white', // text color
+              })
+              } else {
+                axios.post('http://10.0.2.2:3004/favoriteSong', dt)
+                .then(res=>{
+                    console.log(res);
+                    showMessage({
+                      message: "Lagu berhasil ditambahkan",
+                      type: 'default',
+                      backgroundColor: '#01796f', // background color
+                      color: 'white', // text color
+                    })
+                })
+              }
+            }               
+            cariNomor(items, Nomor);
+          })
     }
 
     return (
