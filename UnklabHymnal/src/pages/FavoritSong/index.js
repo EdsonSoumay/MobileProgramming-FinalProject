@@ -60,8 +60,21 @@ const [filterData, setfilterData] = useState([])
           </Text>
           <TouchableOpacity style={{alignItems:"center", justifyContent:"center", paddingRight:10}}  
           onPress={
-           ()=> {onDelete(item)} 
-          } >
+            ()=> Alert.alert(
+              'Peringatan',      
+               "Anda yakin ingin menghapus lagu ini dari daftar favorit?",
+                   [
+                     {
+                       text: 'Tidak',
+                       onPress: () => console.log('button tidak')
+                     },
+                     {
+                       text: 'Ya',
+                       onPress:()=>{onDelete(item)} 
+                     }
+                   ]
+            )
+           } >
               <Text style={{color: 'red', fontWeight:"700", padding:5}}>x</Text>
           </TouchableOpacity>
        </TouchableOpacity>
