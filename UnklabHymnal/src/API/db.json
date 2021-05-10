@@ -1,5 +1,38 @@
 {
-  "favoriteSong": [],
+  "favoriteSong": [
+    {
+      "Nomor": "1",
+      "Judul": " Before Jehova's awfulthrone",
+      "NadaDasar": "D",
+      "Birama": "4/4",
+      "Pengubah": "Jhon Hatton",
+      "Ket1": "1/4",
+      "Ket2": "2/4",
+      "Ket3": "3/4",
+      "Ket4": "4/4",
+      "Ayat1": "Before Jehovah's aweful throne, ye nations, bow with sacred joy; know that the Lord is God alone: he can create, and he destroy.",
+      "Ayat2": "His sovereign power, without our aid,made us of clay, and formed us then; and, when like wandering sheep we strayed, he brought us to his fold again.",
+      "Ayat3": "We'll crowd thy gates with thankful songs, high as the heavens our voices raise; and earth, with her ten thousand tongues, shall fill thy courts with sounding praise.",
+      "Ayat4": "Wide as the world is thy command, vast as eternity thy love; firm as a rock thy truth must stand, when rolling years shall cease to move.",
+      "id": 1
+    },
+    {
+      "Nomor": "2",
+      "Judul": "Di hadapan hadirat Hu",
+      "NadaDasar": "D",
+      "Birama": "4/4",
+      "Pengubah": "Jhon Hatton",
+      "Ket1": "1/4",
+      "Ket2": "2/4",
+      "Ket3": "3/4",
+      "Ket4": "4/4",
+      "Ayat1": " Di hadapan hadirat Hu Hai bangsa-bangsa tunduklah Ketahuilah olehmu, Khalikmu itulah Allah.",
+      "Ayat2": "Dari debu dan tanahlah Kita dijadikan Tuhan Dan bila tersesat kita, Tuhan tak akan tinggalkan.",
+      "Ayat3": "Kuasa dan kasih Allah Memenuhi segnap dunia Tetap teguhlah firman-Nya,Hingga penuh hadirat-Nya.",
+      "Ayat4": "Di pintu Surga yang suci Menyanyi beribu lidah Tuhan kita akan puji, Sampai slama-lamanya.",
+      "id": 2
+    }
+  ],
   "comments": [],
   "profile": {
     "name": "typicode"

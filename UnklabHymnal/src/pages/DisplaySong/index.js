@@ -4,6 +4,7 @@ import axios from 'axios'
 import Logobackground from '../../assets/icons/logo-background.png'
 import Back from '../../assets/icons/icon-back.png'
 import Add from '../../assets/icons/add-favorit-song.png'
+import {showMessage} from 'react-native-flash-message';
 
 const DisplaySong=({ route, navigation }) =>{
     const { Nomor, Judul, NadaDasar,Birama, Pengubah, Ket1, Ket2, Ket3, Ket4, Ket5, KetRef, Ayat1, Ayat2, Ayat3, Ayat4, Ayat5, Ref } = route.params;
