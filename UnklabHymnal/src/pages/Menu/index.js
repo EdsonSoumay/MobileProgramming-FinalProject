@@ -10,23 +10,23 @@ const Menu = ({navigation}) => {
                 <Text style={styles.text}>Unklab Hymnal</Text>
             </View>
             <View style={styles.wrapButton}>
+            <TouchableOpacity onPress={()=>{navigation.navigate('SongIndex')}}>
                 <View style={styles.button}>
-                    <TouchableOpacity onPress={()=>{navigation.navigate('SongIndex')}}>
                             <Text style={styles.textButton}>Index Lagu</Text>
-                    </TouchableOpacity>
                 </View>
+            </TouchableOpacity>
                 <Gap height={37}/>
+            <TouchableOpacity onPress={()=>{navigation.navigate('FavoritSong')}}>
                 <View style={styles.button}>
-                    <TouchableOpacity onPress={()=>{navigation.navigate('FavoritSong')}}>
                             <Text style={styles.textButton}>Lagu favorit</Text>
-                    </TouchableOpacity>
                 </View>
+            </TouchableOpacity>
                 <Gap height={37}/>
+            <TouchableOpacity onPress={()=>{navigation.navigate('About')}}>
                 <View style={styles.button}>
-                    <TouchableOpacity onPress={()=>{navigation.navigate('About')}}>
                             <Text style={styles.textButton}>Tentang Tim</Text>
-                    </TouchableOpacity>
                 </View>
+            </TouchableOpacity>
             </View>
         </View>
 

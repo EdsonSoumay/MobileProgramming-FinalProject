@@ -10,14 +10,14 @@ const About = ({navigation}) => {
   return (
   <>
   <View style ={styles.header}>
-      <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+      <TouchableOpacity style={styles.buttonBack}onPress={()=>{navigation.goBack()}}>
             <Image
             style={{ width: 12, height: 20}}
             resizeMode={'contain'}
             source={Back} />
-            <Gap width={50}/>
       </TouchableOpacity>
-    <Header title ='Tentang Tim' />
+      <Gap width={50}/>
+      <Header title ='Tentang Tim' />
   </View>
  
  <View style={styles.containerName}>
@@ -56,6 +56,7 @@ const styles = StyleSheet.create({
         marginHorizontal:27
 
     },
+    
     textName:{
         fontFamily: "RalewayDots-Regular",
         fontWeight: 'bold',
@@ -73,14 +74,17 @@ const styles = StyleSheet.create({
         marginHorizontal: 10,
         padding: 10
     },
-  header:{
-    width:411, height: 80, 
-    backgroundColor: "#952828",
-    fontWeight: '700',
-    fontFamily: "RalewayDots-Regular",
-    flexDirection: 'row',
-    alignItems: 'center',
-    paddingLeft: 20
-    
-  }
+    header:{
+        flex: 1, 
+        maxHeight: 80, 
+        backgroundColor: "#952828",
+        fontWeight: '700',
+        fontFamily: "RalewayDots-Regular",
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    buttonBack:{
+        padding: 10,
+        marginLeft:10,
+    }
 })

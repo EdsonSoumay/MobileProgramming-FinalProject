@@ -2,7 +2,7 @@ import React from 'react'
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import Logobackground from '../../assets/icons/logo-background.png'
 import Back from '../../assets/icons/icon-back.png'
-import {Gap} from '../../components'
+import {Gap, Header} from '../../components'
 
 const DisplayFavoriteSong=({ route, navigation }) =>{
 
@@ -10,13 +10,12 @@ const DisplayFavoriteSong=({ route, navigation }) =>{
     return (
       <>
               <View style ={styles.header}>         
-                 <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+                 <TouchableOpacity style={styles.backButton} onPress={()=>{navigation.goBack()}}>
                   <Image
                     style={{ width: 12, height: 20}}
                     resizeMode={'contain'}
                     source={Back} />
-                    <Gap width={330}/>
-                    </TouchableOpacity>
+                  </TouchableOpacity>
                 </View>
           <View style={styles.Wrapper}>       
             <View style ={styles.songWrapper}>
@@ -60,14 +59,17 @@ const DisplayFavoriteSong=({ route, navigation }) =>{
 const styles = StyleSheet.create({
     
   header:{
-      width:411, height: 80,
+      height: 80,
       fontWeight: '700',
       fontFamily: "RalewayDots-Regular",
       flexDirection: 'row',
       alignItems: 'center',
-      paddingLeft: 20  
   },
-    backgroundWrap: {
+  backButton:{
+    padding: 10,
+    marginLeft: 20
+  },
+  backgroundWrap: {
     flex: 1,
     flexDirection: "row",
     alignItems:"flex-end",
@@ -90,10 +92,10 @@ const styles = StyleSheet.create({
   container:{
     flex: 1, 
     alignItems: 'center',      
-    },
+  },
   songWrapper:{
     marginBottom: 150
-    },
+  },
   keteranganLagu:{
     paddingHorizontal: 43,
     marginBottom:10,
@@ -101,7 +103,7 @@ const styles = StyleSheet.create({
     fontFamily: "RalewayDots-Regular",
     flexDirection: "row",
     justifyContent:"space-between"
-    },
+  },
   Wrapper:{
     marginBottom:20,
     paddingBottom:100
@@ -112,7 +114,7 @@ const styles = StyleSheet.create({
     fontFamily: "RalewayDots-Regular",
     fontSize: 22,
     marginBottom: 20,
-    },
+  },
   ayat:{
     fontSize: 17,
     paddingHorizontal:68,
@@ -126,4 +128,3 @@ const styles = StyleSheet.create({
     fontWeight: "bold"
     }
   })
-  

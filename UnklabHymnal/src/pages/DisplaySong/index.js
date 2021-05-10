@@ -1,13 +1,11 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity, Image, ImageBackground } from 'react-native'
 import axios from 'axios'
 import Logobackground from '../../assets/icons/logo-background.png'
 import Back from '../../assets/icons/icon-back.png'
 import Add from '../../assets/icons/add-favorit-song.png'
-import {Gap} from '../../components'
 
 const DisplaySong=({ route, navigation }) =>{
-    
     const { Nomor, Judul, NadaDasar,Birama, Pengubah, Ket1, Ket2, Ket3, Ket4, Ket5, KetRef, Ayat1, Ayat2, Ayat3, Ayat4, Ayat5, Ref } = route.params;
    
     const Submit = ()=>{
@@ -30,30 +28,30 @@ const DisplaySong=({ route, navigation }) =>{
           Ayat4: Ayat4, 
           Ayat5: Ayat5, 
           Ref: Ref
-        }
-      
+        } 
+        
         axios.post('http://10.0.2.2:3004/favoriteSong', dt)
         .then(res=>{
             console.log(res)
         })
-      }
+    }
+
     return (
-      <>
-          <View style ={styles.header}>         
-                 <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+      <>   
+          <View style ={styles.header}> 
+                 <TouchableOpacity style={styles.button} onPress={()=>{navigation.goBack()}}>
                   <Image
                     style={{ width: 12, height: 20}}
                     resizeMode={'contain'}
                     source={Back} />
-                    <Gap width={330}/>
                     </TouchableOpacity>
 
-                 <TouchableOpacity onPress={Submit}>
+                    <TouchableOpacity style={styles.button} onPress={Submit}>
                     <Image
                     style={{ width: 24, height: 24}}
                     resizeMode={'contain'}
                     source={Add} />
-                 </TouchableOpacity>
+                    </TouchableOpacity>
                 </View>
           <View style={styles.Wrapper}>       
             <View style ={styles.songWrapper}>
@@ -87,7 +85,6 @@ const DisplaySong=({ route, navigation }) =>{
               <ImageBackground source={Logobackground} style={styles.image}>
               </ImageBackground>
         </View>
-
     </>
     );
   }
@@ -95,15 +92,18 @@ const DisplaySong=({ route, navigation }) =>{
 export default DisplaySong
   
   const styles = StyleSheet.create({ 
-        header:{
-          width:411, height: 80,
+        header:{ 
+          height: 80,
           fontWeight: '700',
           fontFamily: "RalewayDots-Regular",
           flexDirection: 'row',
           alignItems: 'center',
-          paddingLeft: 20   
+          justifyContent:'space-between'   
         },
-
+        button:{
+          padding: 10,
+          marginHorizontal:10,
+        },
         backgroundWrap: {
         flex: 1,
         flexDirection: "row",
@@ -163,4 +163,3 @@ export default DisplaySong
               fontWeight: "bold"
           }
   })
-  

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { FlatList, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Image } from 'react-native'
+import { FlatList, StyleSheet, Text, View, TouchableOpacity, SafeAreaView, Image, Alert } from 'react-native'
 import axios from 'axios'
 import {Gap, Header} from '../../components'
 import Back from '../../assets/icons/icon-back.png'
@@ -58,7 +58,10 @@ const [filterData, setfilterData] = useState([])
           <Text style ={styles.itemStyle}>
             {item.Nomor}{'. '}{item.Judul}
           </Text>
-          <TouchableOpacity style={{alignItems:"center", justifyContent:"center", paddingRight:10}} onPress={()=>onDelete(item)} >
+          <TouchableOpacity style={{alignItems:"center", justifyContent:"center", paddingRight:10}}  
+          onPress={
+           ()=> {onDelete(item)} 
+          } >
               <Text style={{color: 'red', fontWeight:"700", padding:5}}>x</Text>
           </TouchableOpacity>
        </TouchableOpacity>
@@ -69,12 +72,14 @@ const [filterData, setfilterData] = useState([])
 
 const onDelete =(item)=>{
     console.log(item.id);
+  
     axios.delete(`http://10.0.2.2:3004/favoriteSong/${item.id}`)
     .then(res => {
         console.log('res delete', res)
         AxiosPosts();
     })
 }
+
 
 
   const itemSeparatorView = () =>{
@@ -90,14 +95,13 @@ const onDelete =(item)=>{
   <>
   
   <View style ={styles.header}>
-  <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+  <TouchableOpacity style={styles.buttonBack} onPress={()=>{navigation.goBack()}}>
             <Image
             style={{ width: 12, height: 20}}
             resizeMode={'contain'}
             source={Back} />
-            <Gap width={50}/>
       </TouchableOpacity>
-
+      <Gap width={50}/>
     <Header title ='Lagu Favorit'/>
 
   </View>
@@ -117,15 +121,18 @@ export default FavoriteSong;
 
 const styles = StyleSheet.create({
   header:{
-    width:411, height: 80, 
+    flex: 1,
+    maxHeight: 80, 
     backgroundColor: "#952828",
     fontWeight: '700',
     fontFamily: "RalewayDots-Regular",
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 20,
     marginBottom: 20
-
+  },
+  buttonBack:{
+    padding: 10,
+    marginLeft:10,
   },
   SearchContainer:{
     backgroundColor: 'white',

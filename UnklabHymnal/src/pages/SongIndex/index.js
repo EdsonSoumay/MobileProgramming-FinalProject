@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react'
-import { FlatList, StyleSheet, Text, TextInput, View, TouchableOpacity, ScrollView, SafeAreaView, Image } from 'react-native'
+import { FlatList, StyleSheet, Text, TextInput, View, TouchableOpacity, SafeAreaView, Image } from 'react-native'
 import axios from 'axios'
 import {Gap, Header} from '../../components'
 import Back from '../../assets/icons/icon-back.png'
@@ -94,14 +94,14 @@ const searchFilter = (text) =>{
   return (
   <>
   <View style ={styles.header}>
-      <TouchableOpacity onPress={()=>{navigation.goBack()}}>
+      <TouchableOpacity style={styles.buttonBack} onPress={()=>{navigation.goBack()}}>
             <Image
             style={{ width: 12, height: 20}}
             resizeMode={'contain'}
             source={Back} />
-            <Gap width={50}/>
       </TouchableOpacity>
-    <Header title ='Index Lagu' />
+      <Gap width={50}/>
+      <Header title ='Index Lagu' />
   </View>
     <SafeAreaView style ={{flex:1}}>    
       <View style ={styles.SearchContainer}> 
@@ -127,15 +127,18 @@ const searchFilter = (text) =>{
 export default SongIndex;
 
 const styles = StyleSheet.create({
+  buttonBack:{
+    padding: 10,
+    marginLeft:10,
+  },
   header:{
-    width:411, height: 80, 
+    flex: 1,
+    maxHeight: 80, 
     backgroundColor: "#952828",
     fontWeight: '700',
     fontFamily: "RalewayDots-Regular",
     flexDirection: 'row',
     alignItems: 'center',
-    paddingLeft: 20
-    
   },
   SearchContainer:{
     backgroundColor: 'white',
@@ -148,11 +151,11 @@ const styles = StyleSheet.create({
     width: 376,
     marginHorizontal: 18 ,
     marginBottom: 30
-
   },
   SearchTextInput:{
     fontWeight: '700',
-      fontFamily: "Raleway-Italic-VariableFont_wght"
+      fontFamily: "Raleway-Italic-VariableFont_wght",
+      color: 'black'
   },
   itemStyle:{
     padding: 10,
