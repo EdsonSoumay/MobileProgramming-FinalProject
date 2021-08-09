@@ -16,7 +16,7 @@ const SongIndex = ({navigation}) => {
     }
   }, [])
   const AxiosPosts =()=>{
-    const apiURL = 'http://10.0.2.2:3004/data';
+    const apiURL = 'http://10.0.2.2:3000/data';
     axios.get(apiURL)
     .then((response) => {
       setfilterData(response.data);

@@ -16,7 +16,7 @@ const [filterData, setfilterData] = useState([])
   }, [])
 
   const AxiosPosts =()=>{
-    const apiURL = 'http://10.0.2.2:3004/favoriteSong';
+    const apiURL = 'http://10.0.2.2:3000/favoriteSong';
     axios.get(apiURL)
     .then((response) => {
       setfilterData(response.data);
@@ -86,7 +86,7 @@ const [filterData, setfilterData] = useState([])
 const onDelete =(item)=>{
     console.log(item.id);
   
-    axios.delete(`http://10.0.2.2:3004/favoriteSong/${item.id}`)
+    axios.delete(`http://10.0.2.2:3000/favoriteSong/${item.id}`)
     .then(res => {
         console.log('res delete', res)
         AxiosPosts();

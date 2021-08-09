@@ -32,8 +32,8 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 40,
-        fontWeight: '700',
-        fontFamily: 'Raleway-VariableFont_wght'
+        fontFamily: 'Raleway-VariableFont_wght',
+        color: 'white'
     },
     linearGradient: {
         flex: 1,

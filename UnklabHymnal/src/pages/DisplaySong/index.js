@@ -31,7 +31,7 @@ const DisplaySong=({ route, navigation }) =>{
           Ref: Ref
         } 
 
-        axios.get('http://10.0.2.2:3004/favoriteSong')
+        axios.get('http://10.0.2.2:3000/favoriteSong')
         .then( GetRes =>{
             const items = []
               GetRes.data.map(item=>{;
@@ -50,7 +50,7 @@ const DisplaySong=({ route, navigation }) =>{
                 color: 'white', // text color
               })
               } else {
-                axios.post('http://10.0.2.2:3004/favoriteSong', dt)
+                axios.post('http://10.0.2.2:3000/favoriteSong', dt)
                 .then(res=>{
                     console.log(res);
                     showMessage({
@@ -96,18 +96,55 @@ const DisplaySong=({ route, navigation }) =>{
                     </View>
                  </View>    
             <ScrollView style={{marginBottom:60}} showsVerticalScrollIndicator={false}> 
-                <Text style={styles.ket}>{Ket1}</Text>
-                <Text style={styles.ayat}>{Ayat1}</Text>
-                <Text style={styles.ket}>{Ket2}</Text>
-                <Text style= {styles.ayat}>{Ayat2}</Text>
-                <Text style={styles.ket}>{Ket3}</Text>
-                <Text style= {styles.ayat}>{Ayat3}</Text>
-                <Text style={styles.ket}>{Ket4}</Text>
-                <Text style= {styles.ayat}>{Ayat4}</Text>
-                <Text style={styles.ket}>{Ket5}</Text>
-                <Text style= {styles.ayat}>{Ayat5}</Text>
-                <Text style={styles.ket}>{KetRef}</Text>
-                <Text style= {styles.ayat}>{Ref}</Text>
+                {
+                  !Ket1? null
+                  :<Text style={styles.ket}>{Ket1}</Text>
+                }
+                {
+                  !Ayat1? null
+                  :<Text style={styles.ayat}>{Ayat1}</Text>
+                
+                }
+                {
+                  !Ket2? null
+                  :<Text style={styles.ket}>{Ket2}</Text>
+                }
+                {
+                  !Ayat2? null
+                  :<Text style={styles.ayat}>{Ayat2}</Text>
+                }
+                {
+                  !Ket3? null
+                  :<Text style={styles.ket}>{Ket3}</Text>
+                }
+                {
+                  !Ayat3? null
+                  :<Text style={styles.ayat}>{Ayat3}</Text>
+                }
+                {
+                  !Ket4? null
+                  :<Text style={styles.ket}>{Ket4}</Text>
+                }
+                {
+                  !Ayat4? null
+                  :<Text style={styles.ayat}>{Ayat4}</Text>
+                }
+                {
+                  !Ket5? null
+                  :<Text style={styles.ket}>{Ket5}</Text>
+                }
+                {
+                  !Ayat5? null
+                  :<Text style={styles.ayat}>{Ayat5}</Text>
+                }
+                {
+                  !KetRef? null
+                  :<Text style={styles.ket}>{KetRef}</Text>
+                }
+                {
+                  !Ref? null
+                  :<Text style={styles.ayat}>{Ref}</Text>
+                }               
             </ScrollView>
             </View>
         </View>
